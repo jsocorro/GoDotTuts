@@ -1,0 +1,218 @@
+[gd_scene load_steps=21 format=3 uid="uid://ckbm5osndwyp4"]
+
+[ext_resource type="Script" path="res://scenes/level.gd" id="1_6ucmm"]
+[ext_resource type="Texture2D" uid="uid://wbbmcgdujj88" path="res://graphics/ground/stones.png" id="2_t8387"]
+[ext_resource type="PackedScene" uid="uid://dgxvjw4lvm6el" path="res://scenes/player/player.tscn" id="3_crd6n"]
+[ext_resource type="Texture2D" uid="uid://bigwx5ojpl6us" path="res://graphics/decals/dirt_patch.png" id="3_ibry8"]
+[ext_resource type="Texture2D" uid="uid://cxhfelfdp7b7h" path="res://graphics/decals/moss/moss_1.png" id="4_cgm63"]
+[ext_resource type="PackedScene" uid="uid://bxmgabxwqwx36" path="res://scenes/objects/gate.tscn" id="4_opm2e"]
+[ext_resource type="Texture2D" uid="uid://qdbgr1peyuku" path="res://graphics/decals/moss/moss_2.png" id="5_uc17q"]
+[ext_resource type="Texture2D" uid="uid://bw0r777vq5qcy" path="res://graphics/decals/moss/moss_3.png" id="6_q2isc"]
+[ext_resource type="Texture2D" uid="uid://dfovstm7twomh" path="res://graphics/decals/moss/moss_4.png" id="7_lxff2"]
+[ext_resource type="Texture2D" uid="uid://dfldig6hcvw6c" path="res://graphics/tilesets/outside_walls.png" id="8_82sxn"]
+[ext_resource type="Texture2D" uid="uid://58yx7enmk21" path="res://graphics/tilesets/soil.png" id="9_k6vx7"]
+[ext_resource type="Texture2D" uid="uid://cfunx0yfgm3bs" path="res://graphics/decals/moss/moss_5.png" id="10_6awks"]
+[ext_resource type="PackedScene" uid="uid://drd7c4o7y4kds" path="res://scenes/hose/house.tscn" id="10_cglh3"]
+[ext_resource type="Texture2D" uid="uid://eqefmjkbqy8y" path="res://graphics/decals/blood.png" id="11_4d1xf"]
+[ext_resource type="PackedScene" uid="uid://c7py72u1r6vm0" path="res://scenes/objects/steam_vent.tscn" id="15_2f723"]
+[ext_resource type="PackedScene" uid="uid://c1m4ga3le7uvu" path="res://drone.tscn" id="16_ic777"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tm4t5"]
+resource_name = "walls"
+texture = ExtResource("8_82sxn")
+texture_region_size = Vector2i(390, 390)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(195, 56.5, -67.5, 57, -71.5, -57, 195, -60.5)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-195, 56.5, 195, 57, 195, -67.5, -195, -60.5)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-195, 56.5, 67.5, 57, 71.5, -57, -195, -60.5)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(56.5, 195, 57, -67.5, -57, -71.5, -60.5, 195)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(195, 56.5, 57, 64, 53.5, 195, -53.5, 195, -67.5, -67.5, 195, -60.5)
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-195, 56.5, -57, 64, -53.5, 195, 53.5, 195, 67.5, -67.5, -195, -60.5)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(56.5, 195, 64, -195, -57, -195, -60.5, 195)
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(195, -56.5, 57, -64, 53.5, -195, -53.5, -195, -67.5, 67.5, 195, 60.5)
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-195, -56.5, -57, -64, -53.5, -195, 53.5, -195, 67.5, 67.5, -195, 60.5)
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(56.5, -195, 62, 45.5, -60, 52, -56.5, -195)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2riqe"]
+resource_name = "soil"
+texture = ExtResource("9_k6vx7")
+texture_region_size = Vector2i(390, 390)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_4psi8"]
+tile_size = Vector2i(390, 390)
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 13
+sources/0 = SubResource("TileSetAtlasSource_tm4t5")
+sources/1 = SubResource("TileSetAtlasSource_2riqe")
+
+[sub_resource type="Curve2D" id="Curve2D_e1lmm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -649, 682, 0, 0, 0, 0, 1104, 979, 0, 0, 0, 0, 327, 405, 0, 0, 0, 0, -646, 679)
+}
+point_count = 4
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_6ucmm")
+
+[node name="Ground" type="Node2D" parent="."]
+
+[node name="Soil" type="Sprite2D" parent="Ground"]
+texture_repeat = 2
+position = Vector2(88, -134)
+texture = ExtResource("2_t8387")
+region_enabled = true
+region_rect = Rect2(-5630.25, -6029.19, 9151.98, 10302.3)
+
+[node name="Decoration" type="Sprite2D" parent="Ground"]
+modulate = Color(1, 0.839216, 0.627451, 1)
+position = Vector2(630, 608)
+texture = ExtResource("3_ibry8")
+
+[node name="Decoration2" type="Sprite2D" parent="Ground"]
+modulate = Color(1, 0.839216, 0.627451, 1)
+position = Vector2(-30.0001, 179)
+rotation = 3.13313
+texture = ExtResource("3_ibry8")
+
+[node name="Decoration3" type="Sprite2D" parent="Ground"]
+modulate = Color(1, 0.839216, 0.627451, 1)
+position = Vector2(851, 1323)
+rotation = 1.5484
+scale = Vector2(0.933092, 1.32084)
+texture = ExtResource("3_ibry8")
+
+[node name="Moss1" type="Sprite2D" parent="Ground"]
+position = Vector2(-1048, 1099)
+texture = ExtResource("4_cgm63")
+
+[node name="Moss2" type="Sprite2D" parent="Ground"]
+position = Vector2(-1474, 684)
+texture = ExtResource("5_uc17q")
+
+[node name="Moss3" type="Sprite2D" parent="Ground"]
+position = Vector2(-663, 1386)
+texture = ExtResource("6_q2isc")
+
+[node name="Moss4" type="Sprite2D" parent="Ground"]
+position = Vector2(2396, 1031)
+scale = Vector2(1.00157, 1.01462)
+texture = ExtResource("7_lxff2")
+
+[node name="Blood" type="Sprite2D" parent="Ground"]
+position = Vector2(2414, 1291)
+texture = ExtResource("11_4d1xf")
+
+[node name="TileMap" type="TileMap" parent="Ground"]
+position = Vector2(0, 1)
+scale = Vector2(0.985019, 0.990265)
+tile_set = SubResource("TileSet_4psi8")
+format = 2
+layer_0/name = "Soil"
+layer_0/tile_data = PackedInt32Array(327674, 65537, 1, 262138, 131073, 1, 196602, 131073, 1, 131066, 131073, 1, 65530, 131073, 1, -6, 131073, 1, -65539, 131072, 0, 262144, 65537, 0, 262145, 65537, 0, 262146, 65537, 0, 262147, 65537, 0, 262148, 65537, 0, 262149, 65537, 0, 262150, 65537, 0, 262151, 65537, 0, 262152, 65537, 1, 131080, 65537, 1, 65544, 65537, 1, 8, 65537, 1, -65528, 65537, 1, -131064, 65537, 1, -196600, 65537, 1, -262136, 65537, 1, -262137, 65537, 1, -262138, 65537, 1, 327675, 65537, 0, 327676, 65537, 0, 327677, 65537, 0, 327678, 65537, 0, 327679, 65537, 0, -196618, 65537, 1, -131082, 65537, 1, -65546, 65537, 1, -10, 65537, 1, 65526, 65537, 1, 131062, 65537, 1, 196598, 65537, 1, 262134, 65537, 1, 327670, 65537, 1, -196617, 65537, 1, -131081, 65537, 1, -65545, 65537, 1, -9, 65537, 1, 65527, 65537, 1, 131063, 65537, 1, 196599, 65537, 1, 262135, 65537, 1, 327671, 65537, 1, -196616, 65537, 1, -131080, 65537, 1, -65544, 65537, 1, -8, 65537, 1, 65528, 65537, 1, 131064, 65537, 1, 196600, 65537, 1, 262136, 65537, 1, 327672, 65537, 1, -196615, 65537, 1, -131079, 65537, 1, -65543, 65537, 1, -7, 65537, 1, 65529, 65537, 1, 131065, 65537, 1, 196601, 65537, 1, 262137, 65537, 1, 327673, 65537, 1, -327690, 65537, 1, -262154, 65537, 1, -327689, 65537, 1, -262153, 65537, 1, -327688, 65537, 1, -262152, 65537, 1, -327687, 65537, 1, -262151, 65537, 1, -327686, 65537, 1, -262150, 65537, 1, -327685, 65537, 1, -262149, 65537, 1, -327684, 65537, 1, -262148, 65537, 1, -327683, 65537, 1, -262147, 65537, 1, -327682, 65537, 1, -262146, 65537, 1, -327681, 65537, 1, -262145, 65537, 1, -393216, 65537, 1, -327680, 65537, 1, -393215, 65537, 1, -327679, 65537, 1, -393214, 65537, 1, -327678, 65537, 1, -393213, 65537, 1, -327677, 65537, 1, -393212, 65537, 1, -327676, 65537, 1, -393211, 65537, 1, -327675, 65537, 1, -393210, 65537, 1, -327674, 65537, 1, -393209, 65537, 1, -327673, 65537, 1, -393208, 65537, 1, -327672, 65537, 1, -196610, 65537, 1, -196609, 65537, 1, -262144, 65537, 1, -262143, 65537, 1, -262142, 65537, 1, -262141, 65537, 1, -262140, 65537, 1, -262139, 65537, 1, -393207, 65537, 1, -327671, 65537, 1, -262135, 65537, 1, -196599, 65537, 1, -131063, 65537, 1, -65527, 65537, 1, 9, 65537, 1, 65545, 65537, 1, 131081, 65537, 1, 196617, 65537, 1, 262153, 65537, 1, 196616, 65537, 1, -196601, 1, 1, -131065, 1, 1, -65529, 1, 1, 7, 1, 1, 65543, 1, 2, -65542, 131073, 1, -131078, 131073, 1, -196614, 65537, 1, -196613, 65537, 1, -196612, 65537, 2, -196611, 65537, 2, 196607, 65537, 2, 131072, 131073, 2, 196606, 65537, 2, 131071, 65537, 0, 131070, 65537, 0, 131069, 1, 0, 196605, 1, 2, 65536, 131073, 1)
+layer_1/name = "Walls"
+layer_1/tile_data = PackedInt32Array(-65539, 131072, 1, 262141, 65537, 1, 262140, 65537, 1, -65541, 65536, 0, -65540, 65536, 0, -65542, 65536, 1, -6, 0, 2, 65530, 0, 2, 131066, 0, 2, 196602, 0, 2, 262138, 0, 2, 327674, 65536, 2, 327675, 65536, 0, 327676, 65536, 0, 327677, 65536, 0, 327678, 65536, 0, 327679, 65536, 0, 262144, 65536, 0, 262145, 65536, 0, 262146, 65536, 0, 262147, 65536, 0, 262148, 65536, 0, -262138, 65536, 1, -262136, 131072, 1, -196600, 0, 2, -131064, 0, 2, -65528, 0, 2, 8, 0, 2, 65544, 0, 2, 131080, 0, 2, 196616, 0, 2, 262152, 131072, 2, 262149, 65536, 0, 262150, 65536, 0, 262151, 65536, 0, -196602, 0, 2, -131066, 0, 2, -65530, 0, 2, 6, 0, 3)
+
+[node name="House" parent="Ground" instance=ExtResource("10_cglh3")]
+position = Vector2(2495, -5782)
+rotation = 1.57387
+
+[node name="Gate" parent="." instance=ExtResource("4_opm2e")]
+
+[node name="Player" parent="." instance=ExtResource("3_crd6n")]
+position = Vector2(864, 337)
+
+[node name="Projectiles" type="Node2D" parent="."]
+
+[node name="Moss5" type="Sprite2D" parent="."]
+position = Vector2(-715, 831)
+texture = ExtResource("10_6awks")
+
+[node name="SteamVent" parent="." instance=ExtResource("15_2f723")]
+position = Vector2(1683, 720)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.992157, 0.854902, 0.658824, 1)
+blend_mode = 2
+
+[node name="Drone" parent="." instance=ExtResource("16_ic777")]
+position = Vector2(-306, 686)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://scenes/player/player.tscn", "res://scenes/player/player.tscn")
+spawn_path = NodePath("Path2D/PathFollow2D")
+spawn_limit = 10
+
+[node name="Path2D" type="Path2D" parent="MultiplayerSpawner"]
+curve = SubResource("Curve2D_e1lmm")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="MultiplayerSpawner/Path2D"]
+position = Vector2(-649, 682)
+rotation = 0.16783
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_interval = 0.165
+delta_interval = 0.221
+visibility_update_mode = 1
+
+[connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
+[connection signal="granade" from="Player" to="." method="_on_player_granade"]
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="laser" from="Drone" to="." method="_on_drone_laser"]
+[connection signal="object_detected" from="Drone" to="." method="_on_drone_object_detected"]
+[connection signal="object_exited" from="Drone" to="." method="_on_drone_object_exited"]
